@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sito ufficiale del team Delta Mode Engineering, partecipante al programma F1 in Schools. Scopri il nostro progetto, il team e i nostri sponsor.">
+    <meta name="keywords" content="F1 in Schools, Delta Mode Engineering, STEM, Formula 1, competizione scolastica, ingegneria, design, aerodinamica">
+    <title>Delta Mode Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#team">Il Team</a></li>
+                <li><a href="#project">Il Progetto</a></li>
+                <li><a href="#gallery">Galleria</a></li>
+                <li><a href="#sponsors">Sponsor</a></li>
+                <li><a href="#contact">Contatti</a></li>
+                <li><a href="#repository">Repository</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <img src="assets/images/logo.jpg" alt="Delta Mode Engineering Logo" class="logo">
+                <h1>Precisione. Velocità. Innovazione.</h1>
+                <p>Siamo il team Delta Mode Engineering, un gruppo di studenti appassionati di STEM che partecipa al programma F1 in Schools. Progettiamo, costruiamo e gareggiamo con la nostra mini Formula 1, spingendo al massimo le nostre competenze e la nostra creatività.</p>
+            </div>
+        </section>
+        <section id="team" class="container">
+            <h2>Il Team</h2>
+            <!-- Note: This section requires a static site generator like Jekyll to be processed. -->
+            <div class="team-members">
+                {% for member in site.team %}
+                    {% include team_member_card.html member=member %}
+                {% endfor %}
+            </div>
+        </section>
+        <section id="project" class="container">
+            <h2>Il Progetto</h2>
+            <div class="project-description">
+                <p>F1 in Schools è una competizione internazionale STEM in cui studenti di tutto il mondo progettano, costruiscono e gareggiano con auto da corsa in miniatura. Il nostro team, Delta Mode Engineering, sta affrontando questa sfida, passando attraverso diverse fasi di sviluppo:</p>
+                <ul>
+                    <li><strong>Design CAD:</strong> Utilizziamo software di progettazione assistita dal computer per creare il modello 3D della nostra auto.</li>
+                    <li><strong>Aerodinamica:</strong> Analizziamo e ottimizziamo il flusso d'aria intorno all'auto utilizzando software di fluidodinamica computazionale (CFD).</li>
+                    <li><strong>Prototipazione 3D:</strong> Realizziamo prototipi fisici della nostra auto utilizzando stampanti 3D.</li>
+                    <li><strong>Test in pista:</strong> Testiamo le prestazioni della nostra auto su una pista di 24 metri, misurando velocità e tempi di reazione.</li>
+                </ul>
+            </div>
+            <div class="project-timeline">
+                <h3>Timeline del Progetto</h3>
+                <ul>
+                    <li><strong>Settembre:</strong> Formazione del team e definizione dei ruoli.</li>
+                    <li><strong>Ottobre:</strong> Ricerca e sviluppo del concetto iniziale.</li>
+                    <li><strong>Novembre:</strong> Progettazione CAD e analisi CFD.</li>
+                    <li><strong>Dicembre:</strong> Prototipazione 3D e primi test.</li>
+                    <li><strong>Gennaio:</strong> Ottimizzazione del design e test finali.</li>
+                    <li><strong>Febbraio:</strong> Gara!</li>
+                </ul>
+            </div>
+        </section>
+        <section id="gallery" class="container">
+            <h2>Galleria</h2>
+            <div class="gallery-grid">
+                <a href="https://via.placeholder.com/800x600" data-lightbox="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Immagine Galleria 1"></a>
+                <a href="https://via.placeholder.com/800x600" data-lightbox="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Immagine Galleria 2"></a>
+                <a href="https://via.placeholder.com/800x600" data-lightbox="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Immagine Galleria 3"></a>
+                <a href="https://via.placeholder.com/800x600" data-lightbox="gallery-item"><img src="https://via.placeholder.com/300x200" alt="Immagine Galleria 4"></a>
+            </div>
+        </section>
+        <section id="sponsors" class="container">
+            <h2>Sponsor e Partner</h2>
+            <!-- Nota: Questa sezione richiede un generatore di siti statici come Jekyll per essere processata. -->
+            <div class="sponsors-grid">
+                {% for sponsor in site.sponsors %}
+                    {% include sponsor_card.html sponsor=sponsor %}
+                {% endfor %}
+            </div>
+        </section>
+        <section id="contact" class="container">
+            <h2>Contatti</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form action="mailto:info@deltamode.com" method="POST" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Il tuo nome" required>
+                        <input type="email" name="email" placeholder="La tua email" required>
+                        <textarea name="message" placeholder="Il tuo messaggio" rows="5" required></textarea>
+                        <button type="submit">Invia Messaggio</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:info@deltamode.com">info@deltamode.com</a></p>
+                    <p><strong>Social Media:</strong></p>
+                    <ul class="social-links">
+                        <li><a href="#" target="_blank">Twitter</a></li>
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="repository" class="container">
+            <h2>Repository</h2>
+            <div class="repository-content">
+                <p>Crediamo nell'open source e nella condivisione della conoscenza. Il codice sorgente di questo sito web è disponibile su GitHub. Sentiti libero di esplorarlo, fare un fork o contribuire!</p>
+                <a href="#" class="btn" target="_blank">Vai al Repository GitHub</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Delta Mode Engineering. Tutti i diritti riservati.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
