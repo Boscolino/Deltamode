@@ -1,0 +1,20 @@
+title: Delta Mode Engineering
+email: info@deltamode.com
+description: >-
+  Precision. Speed. Innovation. Delta Mode Engineering is a team of students
+  competing in the F1 in Schools competition.
+baseurl: ""
+url: ""
+twitter_username: deltamode
+github_username:  deltamode
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+collections:
+  team:
+    output: false
+  sponsors:
+    output: false
